@@ -1,0 +1,228 @@
+:root {
+  /* colors */
+  --whiten-white: #ededed;
+  --dark-gray: #464646;
+  --middle-gray: #a6a4a4;
+  --slat-blue-gray: #4c566a;
+  --light-steel-blue: #c0c5ce;
+  --dusty-rose: #d49a89;
+  --pale-ivory: #f2eecb;
+  --coral: #ff6363;
+  --coral-darken: #bf4a4a;
+  --dark-cyan: #1c6e8c;
+  --sienna-brown: #997b99;
+  --sienna-brown: #997b66;
+  --goldenrod: #d4af37;
+
+  /* bg-gradients */
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+  color: #464646;
+  background: #464646;
+}
+
+.main {
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  gap: 50px;
+}
+
+.main #form-edit {
+  /* width: 30rem; */
+  background: #e2eded;
+  padding: 2rem 2.5rem;
+  border-radius: 5px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.62);
+}
+
+#form-edit h1 {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-control {
+  display: flex;
+  justify-items: start;
+}
+
+.form-control label {
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize;
+
+  width: 6rem;
+
+  margin-block: 1rem;
+  margin-right: 7rem;
+}
+
+.form-control p {
+  color: var(--dark-gray);
+  margin-top: 1rem;
+}
+
+.form-control .task-edit-name {
+  padding: 12px;
+  font-size: 15px;
+  width: 15rem;
+  height: 2rem;
+  color: #464646;
+  background: #bebebe;
+  border: none;
+  border-radius: 5px;
+  margin-top: 0.6rem;
+}
+
+.edit-btn {
+  border: none;
+  background: #3030e7;
+  width: 100%;
+  margin-top: 2rem;
+  height: 2rem;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.edit-btn h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #e2eded;
+  letter-spacing: 1px;
+}
+.edit-btn .loading-show {
+  display: none;
+}
+.edit-btn .loading-show img {
+  width: 20px;
+}
+
+.edit-btn:hover {
+  background: #4646e3;
+  font-size: 1.1rem;
+}
+
+.form-alert {
+  margin-top: 1rem;
+  font-size: 17px;
+  text-align: center;
+  display: none;
+}
+.form-alert.success {
+  color: rgb(0, 113, 0);
+}
+
+.form-alert.warning {
+  color: rgb(138, 0, 0);
+}
+
+.back-to-task {
+  width: 17rem;
+  height: 2.7rem;
+  background-image: linear-gradient(
+    to right,
+    rgb(0, 0, 0),
+    rgba(40, 40, 40, 0.956)
+  );
+  border: none;
+  border-radius: 5px;
+
+  box-shadow: -1px 2px 10px #c5c5d7;
+  cursor: pointer;
+}
+
+.back-to-task:hover {
+  background-image: linear-gradient(
+    to left,
+    rgba(0, 0, 0, 0.956),
+    rgba(59, 58, 58, 0.956)
+  );
+  box-shadow: 1px 2px 10px #c5c5d7;
+}
+
+.back-to-task a {
+  color: #bebebe;
+  text-decoration: none;
+  font-size: large;
+}
+
+@media (max-width: 600px) {
+  .main #form-edit {
+    padding: 1rem 2rem;
+  }
+  #form-edit h1 {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 0.8rem;
+  }
+
+  .form-control {
+    height: 2rem;
+  }
+
+  .form-control label {
+    font-size: 0.8rem;
+    width: 5rem;
+    margin-right: 1.5rem;
+  }
+
+  .form-control p {
+    font-size: 0.7rem;
+    margin-top: 0.7rem;
+  }
+  .form-control .task-edit-name {
+    width: 7rem;
+    height: 0.5rem;
+    font-size: 12px;
+    padding: 9px;
+    margin-top: 1rem;
+  }
+  .form-control .task-edit-completed {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+
+  .form-control .task-edit-completed {
+    margin-top: 1rem;
+  }
+
+  .edit-btn {
+    width: 10rem;
+    margin-inline: auto;
+  }
+  .edit-btn h4 {
+    font-size: 0.8rem;
+  }
+
+  .back-to-task {
+  width: 12rem;
+  height: 2rem;
+  }
+}

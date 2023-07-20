@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=one.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>Task-Manger</title>
+  </head>
+  <body>
+    <section class="main">
+      <form class="task-input">
+        <h1>Task Manger</h1>
+        <div class="input-submit-btn">
+          <input
+            type="text"
+            name="name"
+            class="task-name"
+            placeholder="e.g. Go to gym"
+          />
+          <button id="submit" type="submit">Submit</button>
+        </div>
+        <div class="form-alert"></div>
+      </form>
+
+      <div class="task-list">
+        <img
+          src="./loading/34338d26023e5515f6cc8969aa027bca_w200.gif"
+          alt=""
+          width="60rem"
+          class="loading-task"
+        />
+        <div class="list-of-task"></div>
+      </div>
+    </section>
+
+    <!-- axios -->
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.one/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+
+    <script src="./browser-app.js"></script>
+  </body>
+</html>
